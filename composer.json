@@ -1,0 +1,46 @@
+{
+    "name":        "josantonius/copy-movie-grifus",
+    "version":     "1.0.0",
+    "description": "Copy full movie information from a single button.",
+    "type": "eliasis-module",
+    "keywords": [
+        "Wordpress", 
+        "Plugin", 
+        "Grifus",
+        "Grifus Extension",
+        "Copy Movie",
+        "Copy Movie Information"
+    ],
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name":     "Josantonius",
+            "email":    "hello@josantonius.com",
+            "homepage": "https://josantonius.com",
+            "role":     "Developer"
+        }
+    ],
+    "config": {
+        "vendor-dir": "lib/vendor",
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://github.com/Josantonius/copy-movie-grifus/issues",
+        "forum": "http://stackoverflow.com/tags/copy-movie-grifus",
+        "source": "https://github.com/Josantonius/copy-movie-grifus"
+    },
+    "require": {
+        "php": "^5.3 || ^7.0",
+        "eliasis-framework/eliasis" : "^1.0.9",
+        "eliasis-framework/module"  : "^1.0.6",
+        "Josantonius/WP_Register"   : "^1.0.2",
+        "Josantonius/Hook"          : "^1.0.4",
+        "composer/installers"       : "^1.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ExtensionsForGrifus\\Modules\\CopyMovieGrifus\\" : "src/"
+        }
+    }
+}
