@@ -30,7 +30,7 @@ return [
             ],
             'eliasisClipboard' => [
                 'name'      => 'eliasisClipboard',
-                'url'       => $js . 'eliasisClipboard.min.js',
+                'url'       => $js . 'eliasis-clipboard.min.js',
                 'place'     => 'front',
                 'deps'      => ['jquery'],
                 'version'   => '1.0.0',
