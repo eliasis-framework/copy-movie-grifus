@@ -56,7 +56,7 @@ class Launcher extends Controller {
 
             if (App::main()->isSingle()) {
 
-                $this->setLanguages();
+                $this->setLanguage();
                 $this->addScripts();
                 $this->addStyles();
             }
