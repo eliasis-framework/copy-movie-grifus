@@ -76,7 +76,7 @@ class Launcher extends Controller {
 
         $pSlug = App::ExtensionsForGrifus()->get('slug');
 
-        $mSlug = Module::CustomImagesGrifus()->get('slug');
+        $mSlug = Module::CopyMovieGrifus()->get('slug');
 
         $path = $pSlug . $DS .'modules' .$DS. $mSlug .$DS. 'languages' . $DS;
 
