@@ -32,7 +32,9 @@ class Launcher extends Controller {
      */
     public function init() {
 
-        if (Module::CopyMovieGrifus()->get('state') === 'active') {
+        $state = Module::CopyMovieGrifus()->get('state');
+
+        if ($state === 'active' || $state === 'outdated') {
 
             add_action('init', [$this, 'setLanguage']);
             
