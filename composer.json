@@ -32,10 +32,9 @@
     },
     "require": {
         "php": "^5.3 || ^7.0",
-        "eliasis-framework/eliasis" : "^1.0.9",
+        "eliasis-framework/eliasis" : "^1.1.0",
         "eliasis-framework/module"  : "^1.0.6",
         "Josantonius/WP_Register"   : "^1.0.2",
-        "Josantonius/Hook"          : "^1.0.4",
         "composer/installers"       : "^1.3.0"
     },
     "autoload": {
