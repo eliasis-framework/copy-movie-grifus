@@ -181,7 +181,9 @@ class Module {
 
         $that->_getSettings();
 
-        if (in_array($action, self::$hooks) || $state === 'active') {
+        if (in_array($action, self::$hooks) || $state === 'active' || $state === 'outdated') {
+
+            Hook::getInstance(App::$id);
 
             $that->_addResources();
 
@@ -264,6 +266,8 @@ class Module {
      * @since 1.0.0
      *
      * @param string $state → module state
+     *
+     * @return string → state
      */
     public function setState($state) {
 
@@ -274,6 +278,8 @@ class Module {
         self::$states['state'] = $state;
 
         self::_setStates();
+
+        return $state;
     }
 
     /**
@@ -320,9 +326,17 @@ class Module {
 
         $that = self::getInstance();
 
-        if ($addAction && isset($that->module['hooks'][$action])) {
+        if ($addAction && isset($that->module['hooks'])) {
 
-            Hook::addAction($that->module['hooks'][$action]);
+        	Hook::getInstance(App::$id);
+
+            foreach ($that->module['hooks'] as $hook) {
+                
+                if (isset($hook[0]) && $action === $hook[0]) {
+
+                    Hook::addActions($hook);
+                }
+            }
         }
 
         Hook::doAction($action);
@@ -477,7 +491,7 @@ class Module {
 
             $folder = array_pop($path);
 
-            if ($folder === $slug || $folder === 'images') {
+            if ($folder === $slug || $folder === 'images' || $folder === 'public') {
 
                 return true;
             }

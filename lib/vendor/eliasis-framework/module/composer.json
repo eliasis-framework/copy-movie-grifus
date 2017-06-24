@@ -32,9 +32,9 @@
     "minimum-stability": "stable",
     "require": {
         "php": "^5.6 || ^7.0",
-        "Eliasis-Framework/Eliasis" : "^1.0.9",
-        "Josantonius/Hook" : "^1.0.4",
-        "Josantonius/Json" : "^1.1.2"
+        "Eliasis-Framework/Eliasis" : "^1.1.0",
+        "Josantonius/Hook"          : "^1.0.5",
+        "Josantonius/Json"          : "^1.1.2"
     },
     "autoload": {
         "psr-4": {

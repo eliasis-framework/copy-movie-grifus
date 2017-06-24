@@ -169,76 +169,24 @@
         ]
     },
     {
-        "name": "eliasis-framework/eliasis",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/Eliasis-Framework/Eliasis.git",
-            "reference": "16365251cee28208a69c452b672e87b08e8e3646"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/Eliasis-Framework/Eliasis/zipball/16365251cee28208a69c452b672e87b08e8e3646",
-            "reference": "16365251cee28208a69c452b672e87b08e8e3646",
-            "shasum": ""
-        },
-        "require": {
-            "josantonius/url": "^1.1.2",
-            "php": "^5.6 || ^7.0"
-        },
-        "time": "2017-06-12 12:13:41",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.0-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Eliasis\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Josantonius",
-                "email": "hello@josantonius.com",
-                "homepage": "https://josantonius.com",
-                "role": "Developer"
-            }
-        ],
-        "description": "Eliasis PHP Framework",
-        "keywords": [
-            "Eliasis",
-            "framework",
-            "hmvc",
-            "php"
-        ]
-    },
-    {
         "name": "josantonius/hook",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
             "url": "https://github.com/Josantonius/PHP-Hook.git",
-            "reference": "1bccac139199d33f0c330596abf6b17abca3be0f"
+            "reference": "c57c454a67429bd69393534de86ddaeb5982b365"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Josantonius/PHP-Hook/zipball/1bccac139199d33f0c330596abf6b17abca3be0f",
-            "reference": "1bccac139199d33f0c330596abf6b17abca3be0f",
+            "url": "https://api.github.com/repos/Josantonius/PHP-Hook/zipball/c57c454a67429bd69393534de86ddaeb5982b365",
+            "reference": "c57c454a67429bd69393534de86ddaeb5982b365",
             "shasum": ""
         },
         "require": {
             "php": "^5.6 || ^7.0"
         },
-        "time": "2017-06-02 02:16:38",
+        "time": "2017-06-24 17:22:23",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -334,21 +282,21 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Eliasis-Framework/Module.git",
-            "reference": "22f19e02e5ae725ea75ad156d64af7009bf77557"
+            "reference": "2e022538fd75c55b592a5e3c0362c92ec730c13e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Eliasis-Framework/Module/zipball/22f19e02e5ae725ea75ad156d64af7009bf77557",
-            "reference": "22f19e02e5ae725ea75ad156d64af7009bf77557",
+            "url": "https://api.github.com/repos/Eliasis-Framework/Module/zipball/2e022538fd75c55b592a5e3c0362c92ec730c13e",
+            "reference": "2e022538fd75c55b592a5e3c0362c92ec730c13e",
             "shasum": ""
         },
         "require": {
-            "eliasis-framework/eliasis": "^1.0.9",
-            "josantonius/hook": "^1.0.4",
+            "eliasis-framework/eliasis": "^1.1.0",
+            "josantonius/hook": "^1.0.5",
             "josantonius/json": "^1.1.2",
             "php": "^5.6 || ^7.0"
         },
-        "time": "2017-06-20 00:06:33",
+        "time": "2017-06-24 04:30:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -437,6 +385,58 @@
             "script",
             "style",
             "wordpress"
+        ]
+    },
+    {
+        "name": "eliasis-framework/eliasis",
+        "version": "1.1.0",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Eliasis-Framework/Eliasis.git",
+            "reference": "c4caed0f6bb4dcf462e946d24fdd15138ae04991"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Eliasis-Framework/Eliasis/zipball/c4caed0f6bb4dcf462e946d24fdd15138ae04991",
+            "reference": "c4caed0f6bb4dcf462e946d24fdd15138ae04991",
+            "shasum": ""
+        },
+        "require": {
+            "josantonius/url": "^1.1.2",
+            "php": "^5.6 || ^7.0"
+        },
+        "time": "2017-06-24 16:55:50",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Eliasis\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Josantonius",
+                "email": "hello@josantonius.com",
+                "homepage": "https://josantonius.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Eliasis PHP Framework",
+        "keywords": [
+            "Eliasis",
+            "framework",
+            "hmvc",
+            "php"
         ]
     }
 ]
