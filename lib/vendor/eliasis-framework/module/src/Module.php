@@ -181,11 +181,13 @@ class Module {
 
         $that->_getSettings();
 
-        if (in_array($action, self::$hooks) || $state === 'active' || $state === 'outdated') {
+        $states = ['active', 'outdated'];
 
-            Hook::getInstance(App::$id);
+        if (in_array($action, self::$hooks) || in_array($state, $states)) {
 
             $that->_addResources();
+
+            Hook::getInstance(App::$id);
 
             Hook::doAction('module-load');
 
@@ -320,26 +322,17 @@ class Module {
      *
      * @param string  $action
      * @param string  $state
-     * @param boolean $addAction
      */
-    private function _doAction($action, $state, $addAction = false) {
+    private function _doAction($action, $state) {
 
         $that = self::getInstance();
 
-        if ($addAction && isset($that->module['hooks'])) {
+        $Launcher = $that->instance('Launcher', 'controller');
 
-        	Hook::getInstance(App::$id);
+        if (is_object($Launcher) && method_exists($Launcher, $action)) {
 
-            foreach ($that->module['hooks'] as $hook) {
-                
-                if (isset($hook[0]) && $action === $hook[0]) {
-
-                    Hook::addActions($hook);
-                }
-            }
+            call_user_func([$Launcher, $action]);
         }
-
-        Hook::doAction($action);
 
         $that->_setAction('');
 
@@ -357,9 +350,9 @@ class Module {
      *
      * @return string → module state
      */
-    public static function remove($moduleName = null, $deleteAll = true) {
+    public static function remove($moduleName, $deleteAll = true) {
 
-        self::$id = ($moduleName) ? $moduleName : self::$id;
+        self::$id = $moduleName;
 
         $that = self::getInstance();
 
@@ -434,7 +427,7 @@ class Module {
 
         $that->setState($state);
 
-        $that->_doAction($action, $state, true);
+        $that->_doAction($action, $state);
 
         return $state;
     }
@@ -446,7 +439,7 @@ class Module {
      *
      * @param boolean $modulePath → module path
      * @param boolean $deleteAll  → delete the entire directory or
-     *                              leave only the configuration file.
+     *                              leave only the configuration file
      *
      * @return boolean
      */
@@ -463,25 +456,25 @@ class Module {
          
         $objects = scandir($modulePath); 
         
-        foreach ($objects as $object) { 
+        foreach ($objects as $obj) { 
         
-            if ($object === '.' || $object === '..') { continue; }
+            if ($obj === '.' || $obj === '..') { continue; }
 
-            if (is_file($modulePath . $object)) {
+            if (is_file($modulePath . $obj)) {
 
                 if (!$deleteAll) {
 
-                    if ($object == $slug.'.php' || $object == $slug.'.png') {
+                    if ($obj == $slug . '.php' || $obj == $slug . '.png') {
 
                         continue;
                     }
                 }
 
-                unlink($modulePath . $object);
+                unlink($modulePath . $obj);
 
             } else {
 
-                $that->_deleteDir($modulePath.$object.App::DS, $deleteAll);
+                $that->_deleteDir($modulePath . $obj . App::DS, $deleteAll);
             } 
         }
 
@@ -491,7 +484,9 @@ class Module {
 
             $folder = array_pop($path);
 
-            if ($folder === $slug || $folder === 'images' || $folder === 'public') {
+            $folders = [$slug, 'images', 'public'];
+
+            if (in_array($folder, $folders)) {
 
                 return true;
             }
@@ -601,6 +596,8 @@ class Module {
 
         if (isset($module['hooks'])) {
 
+            Hook::getInstance(App::$id);
+            
             Hook::addActions($module['hooks']);
         } 
 
@@ -754,9 +751,9 @@ class Module {
             throw new ModuleException($message . ': ' . $index . '.', 817);
         }
 
-        $that = self::getInstance();
-
         self::$id = $index;
+
+        $that = self::getInstance();
 
         if (!$params) { return $that; }
 
