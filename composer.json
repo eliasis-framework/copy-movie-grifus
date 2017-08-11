@@ -35,7 +35,7 @@
         "eliasis-framework/eliasis" : "^1.1.0",
         "eliasis-framework/module"  : "^1.0.7",
         "Josantonius/WP_Register"   : "^1.0.3",
-        "composer/installers"       : "^1.3.0"
+        "composer/installers"       : "^1.4.0"
     },
     "autoload": {
         "psr-4": {
