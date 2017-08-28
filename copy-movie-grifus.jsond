@@ -1,12 +1,65 @@
 {
-    "id":          "CopyMovieGrifus",
-    "name":        "Copy Movie",
-    "version":     "1.0.1",
-    "description": "Copy full movie information from a single button.",
-    "state":       "uninstalled",
-    "category":    "wp-plugin-extension",
-    "uri":         "https://github.com/Josantonius/Copy-Movie-Grifus",
-    "author":      "Josantonius",
-    "author-uri":  "https://josantonius.com/",
-    "license":     "GPL-2.0+"
+    "id":               "CopyMovieGrifus",
+    "name":             "Copy Movie",
+    "version":          "1.0.1",
+    "description":      "Copy full movie information from a single button.",
+    "state":            "uninstalled",
+    "category":         "wp-plugin-extension",
+    "uri":              "https://github.com/Josantonius/Copy-Movie-Grifus.git",
+    "author":           "Josantonius",
+    "author-uri":       "https://josantonius.com/",
+    "license":          "GPL-2.0+",
+    "hooks-controller": "Launcher",
+    "url-import":       "https://raw.githubusercontent.com/Josantonius/Copy-Movie-Grifus/master/"
+
+    "installation-files": {
+        "copy-movie-grifus": {
+            "copy-movie-grifus.jsond",
+            "LICENSE",
+            "composer.json",
+            "config": {
+                "add-urls.php",
+                "assets.php",
+                "module-info.php",
+                "namespaces.php",
+                "paths.php",
+                "set-hooks.php"
+            },
+            "languages": {
+                "extensions-for-grifus-copy-es_ES.mo",
+                "extensions-for-grifus-copy-es_ES.po"
+            },
+            "public": {
+                "css": {
+                    "copy-movie-grifus.css",
+                },
+                "images": {
+                    "copy-movie-grifus.png",
+                },
+                "js": {
+                    "copy-movie-grifus.js",
+                    "eliasis-clipboard.min.js"
+                }
+            },
+            "src": {
+                "Controller": {
+                    "Launcher": {
+                        "Launcher.php",
+                    },
+                    "Front": {
+                        "Copy": {
+                            "Copy.php"
+                        }
+                    }
+                },
+                "Model": {
+                    "Front": {
+                        "Copy": {
+                            "Copy.php"
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
