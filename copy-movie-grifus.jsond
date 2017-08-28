@@ -1,0 +1,12 @@
+{
+    "id":          "CopyMovieGrifus",
+    "name":        "Copy Movie",
+    "version":     "1.0.0",
+    "description": "Copy full movie information from a single button.",
+    "state":       "uninstalled",
+    "category":    "wp-plugin-extension",
+    "uri":         "https://github.com/Josantonius/Copy-Movie-Grifus.git",
+    "author":      "Josantonius",
+    "author-uri":  "https://josantonius.com/",
+    "license":     "GPL-2.0+"
+}
