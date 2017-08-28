@@ -1,7 +1,7 @@
 {
     "id":          "CopyMovieGrifus",
     "name":        "Copy Movie",
-    "version":     "1.0.0",
+    "version":     "1.0.1",
     "description": "Copy full movie information from a single button.",
     "state":       "uninstalled",
     "category":    "wp-plugin-extension",
