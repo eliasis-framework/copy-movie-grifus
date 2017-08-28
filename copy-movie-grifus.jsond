@@ -5,7 +5,7 @@
     "description": "Copy full movie information from a single button.",
     "state":       "uninstalled",
     "category":    "wp-plugin-extension",
-    "uri":         "https://github.com/Josantonius/Copy-Movie-Grifus.git",
+    "uri":         "https://github.com/Josantonius/Copy-Movie-Grifus",
     "author":      "Josantonius",
     "author-uri":  "https://josantonius.com/",
     "license":     "GPL-2.0+"
