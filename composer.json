@@ -33,7 +33,7 @@
     "require": {
         "php": "^5.3 || ^7.0",
         "eliasis-framework/eliasis" : "^1.1.0",
-        "eliasis-framework/module"  : "^1.0.7",
+        "eliasis-framework/module"  : "^1.0.8",
         "Josantonius/WP_Register"   : "^1.0.3",
         "composer/installers"       : "^1.4.0"
     },
