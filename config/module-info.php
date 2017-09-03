@@ -11,9 +11,9 @@
 
 return [
 
-    'name'        => __('Copy Movie', 'extensions-for-grifus'),
+    'name'        => __('Copy Movie', 'extensions-for-grifus-copy'),
     'description' => __(
         'Copy full movie information from a single button.', 
-        'extensions-for-grifus'
+        'extensions-for-grifus-copy'
     ),
 ];
