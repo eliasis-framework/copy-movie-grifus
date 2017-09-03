@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Extensions For Grifus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-23 03:22+0000\n"
-"PO-Revision-Date: 2017-06-23 03:22+0000\n"
+"POT-Creation-Date: 2017-09-03 16:12+0000\n"
+"PO-Revision-Date: 2017-09-03 16:14+0000\n"
 "Last-Translator: Josantonius <hello@josantonius.com>\n"
 "Language-Team: Spanish (Spain)\n"
 "Language: es-ES\n"
@@ -12,6 +12,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco - https://localise.biz/"
+
+#: modules/copy-movie-grifus/config/module-info.php:14
+msgid "Copy Movie"
+msgstr "Copy Movie"
+
+#: modules/copy-movie-grifus/config/module-info.php:15
+msgid "Copy full movie information from a single button."
+msgstr "Copia la información completa de la película con un simple click."
 
 #: modules/copy-movie-grifus/src/Model/Front/Copy/Copy.php:44
 msgid "Title"
