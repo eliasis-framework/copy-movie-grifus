@@ -9,7 +9,7 @@
  * @since      1.0.0
  */
 
-use Eliasis\Module\Module;
+use Eliasis\Complement\Type\Module\Module;
 
 $css = Module::CopyMovieGrifus()->get('url', 'css');
 $js  = Module::CopyMovieGrifus()->get('url', 'js');

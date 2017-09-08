@@ -12,8 +12,8 @@
 namespace ExtensionsForGrifus\Modules\CopyMovieGrifus\Controller\Launcher;
 
 use Josantonius\WP_Register\WP_Register,
+    Eliasis\Complement\Type\Module\Module,
     Eliasis\Controller\Controller,
-    Eliasis\Module\Module,
     Eliasis\App\App;
     
 /**

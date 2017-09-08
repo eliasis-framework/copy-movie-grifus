@@ -1,6 +1,6 @@
 {
     "name":        "josantonius/copy-movie-grifus",
-    "version":     "1.0.1",
+    "version":     "1.0.2",
     "description": "Copy full movie information from a single button.",
     "type": "eliasis-module",
     "keywords": [
@@ -32,10 +32,10 @@
     },
     "require": {
         "php": "^5.3 || ^7.0",
-        "eliasis-framework/eliasis" : "^1.1.0",
-        "eliasis-framework/module"  : "^1.0.8",
-        "Josantonius/WP_Register"   : "^1.0.3",
-        "composer/installers"       : "^1.4.0"
+        "eliasis-framework/eliasis"     : "^1.1.1",
+        "eliasis-framework/complement"  : "^1.0.9",
+        "Josantonius/WP_Register"       : "^1.0.3",
+        "composer/installers"           : "^1.4.0"
     },
     "autoload": {
         "psr-4": {

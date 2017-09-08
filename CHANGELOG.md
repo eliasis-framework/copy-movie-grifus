@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.0.2 - 2017-09-09
+
+* Replaced `eliasis-framework/module` to `eliasis-framework/complement` library.
+
 ## 1.0.1 - 2017-08-28
 
 * The PHP configuration file was replaced by a json file.

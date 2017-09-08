@@ -10,7 +10,7 @@
  */
 
 use Eliasis\App\App,
-    Eliasis\Module\Module;
+    Eliasis\Complement\Type\Module\Module;
 
 $url = App::MODULES_URL() . Module::CopyMovieGrifus()->get('folder');
 
