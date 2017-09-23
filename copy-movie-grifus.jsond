@@ -22,7 +22,6 @@
          "config": [
             "add-urls.php",
             "assets.php",
-            "module-info.php",
             "namespaces.php",
             "paths.php",
             "set-hooks.php"
