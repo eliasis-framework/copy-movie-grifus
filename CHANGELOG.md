@@ -4,6 +4,8 @@
 
 * Replaced `eliasis-framework/module` to `eliasis-framework/complement` library.
 
+* Deleted `copy-movie-grifus/config/module-info.php` file.
+
 ## 1.0.1 - 2017-08-28
 
 * The PHP configuration file was replaced by a json file.
