@@ -4,7 +4,7 @@
    "version": "1.0.2",
    "description": {
       "en": "Copy full movie information from a single button.",
-      "es": "Copia la información completa de la película con un simple click."
+      "es": "Copia la información completa de películas con un simple click."
    },
    "state": "uninstalled",
    "category": "wp-plugin-extension",
