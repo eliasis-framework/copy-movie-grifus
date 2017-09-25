@@ -5,7 +5,7 @@
  * @copyright  Copyright (c) 2017
  * @license    GPL-2.0+
  * @link       https://github.com/Josantonius/Copy-Movie-Grifus.git
- * @since      1.0.0
+ * @since      1.0.3
  */
 
 // Dependencies
