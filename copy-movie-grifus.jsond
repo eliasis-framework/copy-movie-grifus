@@ -31,15 +31,21 @@
             "extensions-for-grifus-copy-es_ES.po"
          ],
          "public": {
-            "css": [
-               "copy-movie-grifus.css"
+            "css": {
+               "0": "copy-movie-grifus.min.css",
+               source: [
+                  "copy-movie-grifus.css"
+               ]
             ],
             "images": [
                "copy-movie-grifus.png"
             ],
             "js": [
-               "copy-movie-grifus.js",
-               "eliasis-clipboard.min.js"
+               "0": "copy-movie-grifus.min.js",
+               source: [
+                  "copy-movie-grifus.js",
+                  "eliasis-clipboard.min.js"
+               ]
             ]
          },
          "src": {
