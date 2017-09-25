@@ -33,20 +33,20 @@
          "public": {
             "css": {
                "0": "copy-movie-grifus.min.css",
-               source: [
+               "source": [
                   "copy-movie-grifus.css"
                ]
-            ],
+            },
             "images": [
                "copy-movie-grifus.png"
             ],
-            "js": [
+            "js": {
                "0": "copy-movie-grifus.min.js",
-               source: [
+               "source": [
                   "copy-movie-grifus.js",
                   "eliasis-clipboard.min.js"
                ]
-            ]
+            }
          },
          "src": {
             "Controller": {
