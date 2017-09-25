@@ -2,8 +2,8 @@
 /node_modules export-ignore
 /resources export-ignore
 /public/sass export-ignore
-/public/css/source/copy-movie-grifus.css.map export-ignore
-/public/css/copy-movie-grifus.css.min.map export-ignore
+/public/css/*.map export-ignore
+/public/css/source/*.map export-ignore
 .gitattributes export-ignore
 .gitignore export-ignore
 CHANGELOG.md export-ignore
