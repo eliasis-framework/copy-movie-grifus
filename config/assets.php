@@ -21,16 +21,7 @@ return [
         'js' => [
             'copyMovieGrifus' => [
                 'name'      => 'copyMovieGrifus',
-                'url'       => $js . 'copy-movie-grifus.js',
-                'place'     => 'front',
-                'deps'      => ['jquery'],
-                'version'   => '1.0.0',
-                'footer'    => false,
-                'params'    => [],
-            ],
-            'eliasisClipboard' => [
-                'name'      => 'eliasisClipboard',
-                'url'       => $js . 'eliasis-clipboard.min.js',
+                'url'       => $js . 'copy-movie-grifus.min.js',
                 'place'     => 'front',
                 'deps'      => ['jquery'],
                 'version'   => '1.0.0',
@@ -41,7 +32,7 @@ return [
         'css' => [
             'copyMovieGrifus' => [
                 'name'      => 'copyMovieGrifus',
-                'url'       => $css . 'copy-movie-grifus.css',
+                'url'       => $css . 'copy-movie-grifus.min.css',
                 'place'     => 'front',
                 'deps'      => [],
                 'version'   => '1.0.0',

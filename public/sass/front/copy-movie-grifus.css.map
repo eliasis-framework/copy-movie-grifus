@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": ";;;;;;;;;;AAAA,cAAc;EACZ,MAAM,EAAE,OAAO",
-"sources": ["partials/_copy-data-sheet.sass"],
-"names": [],
-"file": "copy-movie-grifus.css"
-}

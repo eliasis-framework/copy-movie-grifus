@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.0.3 - 2017-09-25
+
+* Gulp was added to the project for task automation.
+
 ## 1.0.2 - 2017-09-09
 
 * Replaced `eliasis-framework/module` to `eliasis-framework/complement` library.

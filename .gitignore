@@ -4,6 +4,7 @@ composer.lock
 composer-test.lock
 build/artifacts/
 artifacts/
+node_modules/
 docs/_build
 docs/*.pyc
 .git*/

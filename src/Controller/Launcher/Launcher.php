@@ -92,8 +92,6 @@ class Launcher extends Controller {
 
         $js = Module::CopyMovieGrifus()->get('assets', 'js');
 
-        WP_Register::add('script', $js['eliasisClipboard']);
-
         $setting = $js['copyMovieGrifus'];
 
         $params = Module::CopyMovieGrifus()->instance('Copy')
