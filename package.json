@@ -1,5 +1,5 @@
 {
-  "name": "copymoviegrifus",
+  "name": "copy-movie-grifus",
   "version": "1.0.3",
   "description": "Copy full movie information from a single button.",
   "main": "gulpfile.js",
