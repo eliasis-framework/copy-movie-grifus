@@ -13,11 +13,12 @@ class ComposerStaticInit56d92c39afffaf14b71a4fa49990f52f
             'Josantonius\\Url\\' => 16,
             'Josantonius\\Json\\' => 17,
             'Josantonius\\Hook\\' => 17,
+            'Josantonius\\File\\' => 17,
         ),
         'E' => 
         array (
             'ExtensionsForGrifus\\Modules\\CopyMovieGrifus\\' => 44,
-            'Eliasis\\Module\\' => 15,
+            'Eliasis\\Complement\\' => 19,
             'Eliasis\\' => 8,
         ),
         'C' => 
@@ -29,27 +30,31 @@ class ComposerStaticInit56d92c39afffaf14b71a4fa49990f52f
     public static $prefixDirsPsr4 = array (
         'Josantonius\\WP_Register\\' => 
         array (
-            0 => __DIR__ . '/..' . '/josantonius/wp_register/src',
+            0 => __DIR__ . '/..' . '/josantonius/wp_register/src/WP_Register',
         ),
         'Josantonius\\Url\\' => 
         array (
-            0 => __DIR__ . '/..' . '/josantonius/url/src',
+            0 => __DIR__ . '/..' . '/josantonius/url/src/Url',
         ),
         'Josantonius\\Json\\' => 
         array (
-            0 => __DIR__ . '/..' . '/josantonius/json/src',
+            0 => __DIR__ . '/..' . '/josantonius/json/src/Json',
         ),
         'Josantonius\\Hook\\' => 
         array (
-            0 => __DIR__ . '/..' . '/josantonius/hook/src',
+            0 => __DIR__ . '/..' . '/josantonius/hook/src/Hook',
+        ),
+        'Josantonius\\File\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/josantonius/file/src/File',
         ),
         'ExtensionsForGrifus\\Modules\\CopyMovieGrifus\\' => 
         array (
             0 => __DIR__ . '/../../..' . '/src',
         ),
-        'Eliasis\\Module\\' => 
+        'Eliasis\\Complement\\' => 
         array (
-            0 => __DIR__ . '/..' . '/eliasis-framework/module/src',
+            0 => __DIR__ . '/..' . '/eliasis-framework/complement/src',
         ),
         'Eliasis\\' => 
         array (

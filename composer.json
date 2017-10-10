@@ -34,7 +34,7 @@
         "php": "^5.3 || ^7.0",
         "eliasis-framework/eliasis"     : "^1.1.1",
         "eliasis-framework/complement"  : "^1.0.9",
-        "Josantonius/WP_Register"       : "^1.0.3",
+        "Josantonius/WP_Register"       : "^1.0.4",
         "composer/installers"           : "^1.4.0"
     },
     "autoload": {

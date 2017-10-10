@@ -1,26 +1,28 @@
-<?php 
+<?php
 /**
- * PHP simple library for managing Json files.
- * 
+ * PHP library for adding addition of complements for Eliasis Framework.
+ *
  * @author     Josantonius - hello@josantonius.com
- * @copyright  Copyright (c) 2016 - 2017
+ * @copyright  Copyright (c) 2017
  * @license    https://opensource.org/licenses/MIT - The MIT License (MIT)
- * @link       https://github.com/Josantonius/PHP-Json
+ * @link       https://github.com/Eliasis-Framework/Complement
  * @since      1.0.0
  */
 
-namespace Josantonius\Json\Exception;
+namespace Eliasis\Complement\Exception;
 
 /**
- * Exception class for Json library.
- *
- * You can use an exception and error handler with this library.
+ * Exception class.
  *
  * @since 1.0.0
  *
+ * You can use an exception and error handler with this library.
+ *
  * @link https://github.com/Josantonius/PHP-ErrorHandler
+ *
+ * @return void
  */
-class JsonException extends \Exception { 
+class ComplementException extends \Exception { 
 
     /**
      * Exception handler.

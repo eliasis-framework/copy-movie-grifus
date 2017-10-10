@@ -1,12 +1,13 @@
 {
-    "name":        "josantonius/hook",
-    "version":     "1.0.6",
+    "name":        "josantonius/file",
+    "version":     "1.1.4",
     "type":        "library",
-    "description": "Library for handling hooks.",
+    "description": "PHP library for file management.",
     "keywords": [
-        "Hook",
-        "Actions",
-        "Action Hooks",
+        "File",
+        "Search words in file",
+        "File handler",
+        "Strings",
         "HHVM",
         "PHP"
     ],
@@ -20,9 +21,9 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/josantonius/php-asset/issues",
-        "forum":  "http://stackoverflow.com/tags/josantonius/php-asset",
-        "source": "https://github.com/josantonius/php-asset"
+        "issues": "https://github.com/josantonius/php-file/issues",
+        "forum":  "http://stackoverflow.com/tags/josantonius/php-file",
+        "source": "https://github.com/josantonius/php-file"
     },
     "config": {
         "preferred-install": "dist"
@@ -33,10 +34,10 @@
     },
     "require-dev": {
         "phpunit/phpunit": "5.7.*"
-    },
+    },    
     "autoload": {
         "psr-4": {
-            "Josantonius\\Hook\\": "src/Hook/"
+            "Josantonius\\File\\": "src/File/"
         }
     },
     "extra": {

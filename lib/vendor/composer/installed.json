@@ -6,18 +6,21 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Josantonius/PHP-Hook.git",
-            "reference": "51ccc29ddc232a8a4eb6bbb71847bf33574f0f6c"
+            "reference": "dc1a804028d9e792d8bbb22f6762f2209355d220"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Josantonius/PHP-Hook/zipball/51ccc29ddc232a8a4eb6bbb71847bf33574f0f6c",
-            "reference": "51ccc29ddc232a8a4eb6bbb71847bf33574f0f6c",
+            "url": "https://api.github.com/repos/Josantonius/PHP-Hook/zipball/dc1a804028d9e792d8bbb22f6762f2209355d220",
+            "reference": "dc1a804028d9e792d8bbb22f6762f2209355d220",
             "shasum": ""
         },
         "require": {
             "php": "^5.6 || ^7.0"
         },
-        "time": "2017-07-16 01:19:23",
+        "require-dev": {
+            "phpunit/phpunit": "5.7.*"
+        },
+        "time": "2017-09-14 21:35:49",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -27,7 +30,7 @@
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "Josantonius\\Hook\\": "src/"
+                "Josantonius\\Hook\\": "src/Hook/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -52,240 +55,27 @@
         ]
     },
     {
-        "name": "josantonius/url",
-        "version": "1.1.4",
-        "version_normalized": "1.1.4.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/Josantonius/PHP-Url.git",
-            "reference": "67cdf6f02234a4e354e5490f011ef02fb31a96f6"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/Josantonius/PHP-Url/zipball/67cdf6f02234a4e354e5490f011ef02fb31a96f6",
-            "reference": "67cdf6f02234a4e354e5490f011ef02fb31a96f6",
-            "shasum": ""
-        },
-        "require": {
-            "php": "^5.6 || ^7.0"
-        },
-        "time": "2017-07-18 20:56:13",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.0-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Josantonius\\Url\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Josantonius",
-                "email": "hello@josantonius.com",
-                "homepage": "https://josantonius.com",
-                "role": "Developer"
-            }
-        ],
-        "description": "Library for urls manipulation.",
-        "keywords": [
-            "hhvm",
-            "https",
-            "path",
-            "php",
-            "uri",
-            "url"
-        ]
-    },
-    {
-        "name": "eliasis-framework/eliasis",
-        "version": "1.1.0",
-        "version_normalized": "1.1.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/Eliasis-Framework/Eliasis.git",
-            "reference": "55d9928d3f6b715e1febb2036a65b4d71fcb192f"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/Eliasis-Framework/Eliasis/zipball/55d9928d3f6b715e1febb2036a65b4d71fcb192f",
-            "reference": "55d9928d3f6b715e1febb2036a65b4d71fcb192f",
-            "shasum": ""
-        },
-        "require": {
-            "josantonius/url": "^1.1.2",
-            "php": "^5.6 || ^7.0"
-        },
-        "time": "2017-07-18 01:49:56",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.0-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Eliasis\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Josantonius",
-                "email": "hello@josantonius.com",
-                "homepage": "https://josantonius.com",
-                "role": "Developer"
-            }
-        ],
-        "description": "Eliasis PHP Framework",
-        "keywords": [
-            "Eliasis",
-            "framework",
-            "hmvc",
-            "php"
-        ]
-    },
-    {
-        "name": "josantonius/json",
-        "version": "1.1.2",
-        "version_normalized": "1.1.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/Josantonius/PHP-Json.git",
-            "reference": "773d519c98bd620ce687b88a87574317722afc44"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/Josantonius/PHP-Json/zipball/773d519c98bd620ce687b88a87574317722afc44",
-            "reference": "773d519c98bd620ce687b88a87574317722afc44",
-            "shasum": ""
-        },
-        "require": {
-            "php": "^5.6 || ^7.0"
-        },
-        "time": "2017-07-18 20:14:23",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.0-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Josantonius\\Json\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Josantonius",
-                "email": "hello@josantonius.com",
-                "homepage": "https://josantonius.com",
-                "role": "Developer"
-            }
-        ],
-        "description": "PHP simple library for managing Json files.",
-        "keywords": [
-            "Array to file",
-            "File to array",
-            "JavaScript Object Notation",
-            "data exchange",
-            "hhvm",
-            "javascript",
-            "json",
-            "php"
-        ]
-    },
-    {
-        "name": "eliasis-framework/module",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/Eliasis-Framework/Module.git",
-            "reference": "79036f4297e2321d5c9b312b99beb26540ef9151"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/Eliasis-Framework/Module/zipball/79036f4297e2321d5c9b312b99beb26540ef9151",
-            "reference": "79036f4297e2321d5c9b312b99beb26540ef9151",
-            "shasum": ""
-        },
-        "require": {
-            "eliasis-framework/eliasis": "^1.1.0",
-            "josantonius/hook": "^1.0.5",
-            "josantonius/json": "^1.1.2",
-            "php": "^5.6 || ^7.0"
-        },
-        "time": "2017-08-28 18:06:24",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.0-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Eliasis\\Module\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Josantonius",
-                "email": "hello@josantonius.com",
-                "homepage": "https://josantonius.com",
-                "role": "Developer"
-            }
-        ],
-        "description": "PHP library for adding addition of modules for Eliasis Framework.",
-        "keywords": [
-            "Eliasis",
-            "Module Handler",
-            "framework",
-            "hmvc",
-            "module",
-            "php"
-        ]
-    },
-    {
         "name": "josantonius/wp_register",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
             "url": "https://github.com/Josantonius/WP_Register.git",
-            "reference": "283b3d5f1ba2ed95b74eb52988fe1467708818e6"
+            "reference": "294fa1de120575c88335a5fda63317b7273b539b"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Josantonius/WP_Register/zipball/283b3d5f1ba2ed95b74eb52988fe1467708818e6",
-            "reference": "283b3d5f1ba2ed95b74eb52988fe1467708818e6",
+            "url": "https://api.github.com/repos/Josantonius/WP_Register/zipball/294fa1de120575c88335a5fda63317b7273b539b",
+            "reference": "294fa1de120575c88335a5fda63317b7273b539b",
             "shasum": ""
         },
         "require": {
             "php": "^5.6 || ^7.0"
         },
-        "time": "2017-08-04 14:38:41",
+        "require-dev": {
+            "josantonius/file": "^1.1.4"
+        },
+        "time": "2017-10-10 06:15:58",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -295,7 +85,7 @@
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "Josantonius\\WP_Register\\": "src/"
+                "Josantonius\\WP_Register\\": "src/WP_Register/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -310,16 +100,21 @@
                 "role": "Developer"
             }
         ],
-        "description": "Register css and JavaScript resources.",
+        "description": "Register, minify and unify CSS and JavaScript resources.",
         "keywords": [
             "JS",
+            "assets",
             "css",
             "enqueue",
             "hhvm",
+            "minify CSS",
+            "minify JS",
             "php",
             "register",
             "script",
             "style",
+            "unify CSS",
+            "unify JS",
             "wordpress"
         ]
     },
@@ -440,6 +235,288 @@
             "yawik",
             "zend",
             "zikula"
+        ]
+    },
+    {
+        "name": "josantonius/url",
+        "version": "1.1.5",
+        "version_normalized": "1.1.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Josantonius/PHP-Url.git",
+            "reference": "eb1266177050ff33534009052122b8d5ff381ade"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Josantonius/PHP-Url/zipball/eb1266177050ff33534009052122b8d5ff381ade",
+            "reference": "eb1266177050ff33534009052122b8d5ff381ade",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^5.6 || ^7.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "5.7.*"
+        },
+        "time": "2017-09-18 02:14:58",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Josantonius\\Url\\": "src/Url/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Josantonius",
+                "email": "hello@josantonius.com",
+                "homepage": "https://josantonius.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Library for urls manipulation.",
+        "keywords": [
+            "hhvm",
+            "https",
+            "path",
+            "php",
+            "uri",
+            "url"
+        ]
+    },
+    {
+        "name": "josantonius/json",
+        "version": "1.1.4",
+        "version_normalized": "1.1.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Josantonius/PHP-Json.git",
+            "reference": "dd04ee52187aa1828d978a6f3a84eece1a8053cb"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Josantonius/PHP-Json/zipball/dd04ee52187aa1828d978a6f3a84eece1a8053cb",
+            "reference": "dd04ee52187aa1828d978a6f3a84eece1a8053cb",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^5.6 || ^7.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "5.7.*"
+        },
+        "time": "2017-09-29 22:25:33",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Josantonius\\Json\\": "src/Json/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Josantonius",
+                "email": "hello@josantonius.com",
+                "homepage": "https://josantonius.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "PHP simple library for managing Json files.",
+        "keywords": [
+            "Array to file",
+            "File to array",
+            "JavaScript Object Notation",
+            "data exchange",
+            "hhvm",
+            "javascript",
+            "json",
+            "php"
+        ]
+    },
+    {
+        "name": "josantonius/file",
+        "version": "1.1.4",
+        "version_normalized": "1.1.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Josantonius/PHP-File.git",
+            "reference": "b1a7bc29e6b715bf13979efcf82dcd14e8397dcb"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Josantonius/PHP-File/zipball/b1a7bc29e6b715bf13979efcf82dcd14e8397dcb",
+            "reference": "b1a7bc29e6b715bf13979efcf82dcd14e8397dcb",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^5.6 || ^7.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "5.7.*"
+        },
+        "time": "2017-09-14 21:33:47",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Josantonius\\File\\": "src/File/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Josantonius",
+                "email": "hello@josantonius.com",
+                "homepage": "https://josantonius.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "PHP library for file management.",
+        "keywords": [
+            "File handler",
+            "Search words in file",
+            "file",
+            "hhvm",
+            "php",
+            "strings"
+        ]
+    },
+    {
+        "name": "eliasis-framework/eliasis",
+        "version": "1.1.1",
+        "version_normalized": "1.1.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Eliasis-Framework/Eliasis.git",
+            "reference": "0c4df8fc002328f97ccf61f135b2ba7dc2de8c10"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Eliasis-Framework/Eliasis/zipball/0c4df8fc002328f97ccf61f135b2ba7dc2de8c10",
+            "reference": "0c4df8fc002328f97ccf61f135b2ba7dc2de8c10",
+            "shasum": ""
+        },
+        "require": {
+            "josantonius/url": "^1.1.4",
+            "php": "^5.6 || ^7.0"
+        },
+        "time": "2017-09-11 00:08:59",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Eliasis\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Josantonius",
+                "email": "hello@josantonius.com",
+                "homepage": "https://josantonius.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Eliasis PHP Framework",
+        "keywords": [
+            "Eliasis",
+            "framework",
+            "hmvc",
+            "php"
+        ]
+    },
+    {
+        "name": "eliasis-framework/complement",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Eliasis-Framework/Complement.git",
+            "reference": "9a32fdae14958b9e4d5fb46eb424384a3fe613fa"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Eliasis-Framework/Complement/zipball/9a32fdae14958b9e4d5fb46eb424384a3fe613fa",
+            "reference": "9a32fdae14958b9e4d5fb46eb424384a3fe613fa",
+            "shasum": ""
+        },
+        "require": {
+            "eliasis-framework/eliasis": "^1.1.1",
+            "josantonius/file": "^1.1.3",
+            "josantonius/hook": "^1.0.5",
+            "josantonius/json": "^1.1.2",
+            "php": "^5.6 || ^7.0"
+        },
+        "time": "2017-09-25 04:11:33",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Eliasis\\Complement\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Josantonius",
+                "email": "hello@josantonius.com",
+                "homepage": "https://josantonius.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "PHP library for adding addition of complements for Eliasis Framework.",
+        "keywords": [
+            "Eliasis",
+            "Module Handler",
+            "Tenplate",
+            "component",
+            "framework",
+            "hmvc",
+            "module",
+            "php",
+            "plugin"
         ]
     }
 ]

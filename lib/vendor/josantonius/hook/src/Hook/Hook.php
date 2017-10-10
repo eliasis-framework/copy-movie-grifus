@@ -11,8 +11,6 @@
 
 namespace Josantonius\Hook;
 
-use Josantonius\Hook\Exception\HookException;
-
 /**
  * Hook handler.
  *
@@ -93,20 +91,6 @@ class Hook {
         } 
         
         return self::$_instances[self::$id] = new self;
-    }
-
-    /**
-     * Set method name for use singleton pattern.
-     *
-     * @since 1.0.0
-     *
-     * @param string $method → singleton method name
-     */
-    public static function setSingletonName($method) {
-
-        $that = self::getInstance(self::$id);
-
-        $that->singleton = $method;
     }
 
     /**
@@ -202,6 +186,34 @@ class Hook {
         return (isset($action)) ? $action : false;
     }
 
+    /**
+     * Set method name for use singleton pattern.
+     *
+     * @since 1.0.0
+     *
+     * @param string $method → singleton method name
+     *
+     * @return void
+     */
+    public static function setSingletonName($method) {
+
+        $that = self::getInstance(self::$id);
+
+        $that->singleton = $method;
+    }
+
+    /**
+     * Returns the current action hook.
+     *
+     * @since 1.0.3
+     *
+     * @return string|false → current action hook
+     */
+    public static function current() {
+
+        return self::$current;
+    }
+    
     /**
      * Run action hook.
      *
@@ -300,17 +312,5 @@ class Hook {
         }
 
         return [];
-    }
-
-    /**
-     * Returns the current action hook.
-     *
-     * @since 1.0.3
-     *
-     * @return string|false → current action hook
-     */
-    public static function current() {
-
-        return self::$current;
     }
 }

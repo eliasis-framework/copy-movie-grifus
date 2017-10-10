@@ -81,6 +81,8 @@ class App {
      * @param string $baseDirectory → directory where class is instantiated
      * @param string $type          → application type
      * @param string $id            → unique id for the application
+     *
+     * @return void
      */
     public static function run($baseDirectory, $type = 'app', $id = '0') {
 
@@ -92,10 +94,9 @@ class App {
         $that->_setUrls($baseDirectory, $type);
         $that->_setIp();
         $that->_runErrorHandler();
-        $that->_runCleaner();
         $that->_getSettings();
         $that->_runHooks();
-        $that->_runModules();
+        $that->_runComplements();
         $that->_runRoutes();
     }
 
@@ -105,28 +106,14 @@ class App {
      * @since 1.0.1
      *
      * @link https://github.com/Josantonius/PHP-ErrorHandler
+     *
+     * @return void
      */
     private function _runErrorHandler() {
 
-        if (class_exists($class='Josantonius\ErrorHandler\ErrorHandler')) {
+        if (class_exists($class = 'Josantonius\ErrorHandler\ErrorHandler')) {
 
             new $class;
-        }
-    }
-
-    /**
-     * Cleaning resources.
-     *
-     * @since 1.0.1
-     *
-     * @link https://github.com/Josantonius/PHP-Cleaner
-     */
-    private function _runCleaner() {
-
-        if (class_exists($Cleaner = 'Josantonius\Cleaner\Cleaner')) {
-
-            $Cleaner::removeMagicQuotes();
-            $Cleaner::unregisterGlobals();
         }
     }
 
@@ -136,12 +123,20 @@ class App {
      * @since 1.0.1
      *
      * @param string $baseDirectory → directory where class is instantiated
+     *
+     * @return void
      */
     private function _setPaths($baseDirectory) {
 
         $this->set('ROOT', $baseDirectory . App::DS);
+
         $this->set('CORE', dirname(dirname(__DIR__)) . App::DS);
-        $this->set('MODULES', App::ROOT() . 'modules' . App::DS);
+
+        $this->set('PUBLIC',     App::ROOT() . 'public'     . App::DS);
+        $this->set('THEMES',     App::ROOT() . 'themes'     . App::DS);
+        $this->set('MODULES',    App::ROOT() . 'modules'    . App::DS);
+        $this->set('PLUGINS',    App::ROOT() . 'plugins'    . App::DS);
+        $this->set('COMPONENTS', App::ROOT() . 'components' . App::DS);
     }
 
     /**
@@ -151,6 +146,8 @@ class App {
      *
      * @param string $baseDirectory → directory where class is instantiated
      * @param string $type          → application type
+     *
+     * @return void
      */
     private function _setUrls($baseDirectory, $type) {
 
@@ -165,8 +162,12 @@ class App {
                 break;
         }
 
-        $this->set('MODULES_URL', $baseUrl . 'modules/');
-        $this->set('PUBLIC_URL',  $baseUrl . 'public/');
+        $this->set('PUBLIC_URL',     $baseUrl . 'public/');
+        $this->set('THEMES_URL',     $baseUrl . 'themes/');
+        $this->set('MODULES_URL',    $baseUrl . 'modules/');
+        $this->set('PLUGINS_URL',    $baseUrl . 'plugins/');
+        $this->set('COMPONENTS_URL', $baseUrl . 'components/');
+        
     }
 
     /**
@@ -174,7 +175,11 @@ class App {
      *
      * @since 1.1.0
      *
+     * @uses string Ip::get() → get IP
+     *
      * @link https://github.com/Josantonius/PHP-Ip
+     *
+     * @return void
      */
     private function _setIp() {
 
@@ -190,6 +195,8 @@ class App {
      * Get settings.
      *
      * @since 1.0.0
+     *
+     * @return void
      */
     private function _getSettings() {
 
@@ -220,7 +227,12 @@ class App {
      *
      * @since 1.1.0
      *
+     * @uses string Hook::getInstance() → get Hook instance
+     * @uses string Hook::addActions()  → add action hook
+     *
      * @link https://github.com/Josantonius/PHP-Hook
+     *
+     * @return void
      */
     private function _runHooks() {
 
@@ -238,20 +250,29 @@ class App {
     }
 
     /**
-     * Load Modules.
+     * Load complements.
      *
-     * @since 1.0.1
+     * @since 1.1.1
      *
-     * @link https://github.com/Eliasis-Framework/Module
+     * @uses void Component::run() → run modules
+     * @uses void Plugin::run()    → run modules
+     * @uses void Module::run()    → run modules
+     * @uses void Template::run()  → run modules
+     *
+     * @link https://github.com/Eliasis-Framework/Complement
+     *
+     * @return void
      */
-    private function _runModules() {
+    private function _runComplements() {
 
-        if (is_dir($modulesPath = App::ROOT() . 'modules' . App::DS)) {
+        if (class_exists('Eliasis\Complement\Complement')) {
 
-            if (class_exists($Module = 'Eliasis\Module\Module')) {
+            $complement = 'Eliasis\Complement\\';
 
-                $Module::loadModules($modulesPath);
-            }
+            call_user_func($complement . 'Type\Component\Component::run');
+            call_user_func($complement . 'Type\Plugin\Plugin::run');
+            call_user_func($complement . 'Type\Module\Module::run');
+            call_user_func($complement . 'Type\Template\Template::run');
         }
     } 
 
@@ -260,7 +281,12 @@ class App {
      *
      * @since 1.0.1
      *
+     * @uses string Router::addRoute() → add routes
+     * @uses string Router::dispatch() → dispath routes
+     *
      * @link https://github.com/Josantonius/PHP-Router
+     *
+     * @return void
      */
     private function _runRoutes() {
 

@@ -16,12 +16,12 @@ jQuery(document).ready(function($) {
 
       $(".s_right").append(
          '<div id="grifusDataSheet" data-clipboard-text="" class="filtro_y">' +
-            '<h3>' + copyMovieGrifus.copy_title + '</h3>' + 
+            '<h3>' + eliasis.copy_title + '</h3>' + 
             '<ul class="scrolling mCustomScrollbar _mCS_2 mCS-autoHide mCS_no_scrollbar" style="position: relative; overflow: visible;">' +
                '<div id="mCSB_2" class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside" tabindex="0" style="max-height: none;">' +
                   '<div id="clipboard-button" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">' +
                      '<li id="copyDataSheet" class="btn">' +
-                        '<a>' + copyMovieGrifus.copy_button + '</a>' +
+                        '<a>' + eliasis.copy_button + '</a>' +
                      '</li>' +
                   '</div>' +
                '</div>' +
@@ -35,7 +35,7 @@ jQuery(document).ready(function($) {
          '</div>'
       );
       
-      var movie = copyMovieGrifus.movie_info;
+      var movie = eliasis.movie_info;
 
       var clipboard = movie.the_title + movie.title + movie.published + movie.rated + movie.duration + movie.rating + movie.votes + movie.awards + movie.country + movie.sipnosis + movie.director + movie.stars + movie.cast + movie.genre;
 

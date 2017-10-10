@@ -82,7 +82,7 @@ class Url {
 
         $protocol = substr($protocol, 0, strpos($protocol, '/'));
 
-        $ssl = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on');
+        $ssl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on');
 
         return ($ssl) ? $protocol . 's' : $protocol;
     }
@@ -151,6 +151,44 @@ class Url {
     }
 
     /**
+     * Set parameters from the url and return url without them.
+     *
+     * If a url is received as: http://www.web.com/&key=value&key-2=value
+     * params will be saved as GET values and return: http://www.web.com/
+     *
+     * If a url is received as: http://www.web.com/?key=value&key-2=value
+     * GET parameters are maintained and return: http://www.web.com/
+     *
+     * @since 1.1.5
+     *
+     * @param string $url → url
+     *
+     * @return string → url
+     */
+    public static function setUrlParams($url) {
+
+        if (strpos($url, '?') == false && strpos($url, '&') != false) {
+
+            $url = preg_replace('/&/', '?', $url, 1);
+
+            $parts = parse_url($url);
+            
+            $query = isset($parts['query']) ? $parts['query'] : '';
+
+            parse_str($query, $query);
+
+            $url = str_replace($query, '', $url);
+        }
+
+        foreach (isset($query) ? $query : [] as $key => $value) {
+                    
+            $_GET[$key] = $value;
+        }
+
+        return explode('?', $url)[0];
+    }
+    
+    /**
      * Get the server port.
      *
      * @since 1.0.0
@@ -197,6 +235,8 @@ class Url {
      * Go to the previous url.
      *
      * @since 1.0.0
+     *
+     * @return void
      */
     public static function previous() {
 
@@ -210,6 +250,8 @@ class Url {
      * @since 1.0.0
      *
      * @param  string  $url → the url to redirect to
+     *
+     * @return void
      */
     public static function redirect($url) {
 
@@ -270,11 +312,11 @@ class Url {
     /**
      * Get all url parts based on a / seperator.
      *
-     * @since 1.0.0
+     * @since 1.1.5
      *
      * @return array → segments
      */
-    public static function segment($uri = null) {
+    public static function segmentUri($uri = null) {
 
         $uri = (!is_null($uri)) ? $uri : $_SERVER['REQUEST_URI'];
  
@@ -286,11 +328,13 @@ class Url {
      *
      * @since 1.0.0
      *
-     * @return string → first segment
+     * @return mixed → segments
      */
     public static function getFirstSegment($segments) {
 
-        return $segments[0];
+        $var = is_array($segments) ? $segments : self::segmentUri($segments);
+
+        return array_shift($var);
     }
 
     /**
@@ -298,10 +342,12 @@ class Url {
      *
      * @since 1.0.0
      *
-     * @return string → last segment
+     * @return mixed → segments
      */
     public static function getLastSegment($segments) {
 
-        return end($segments);
+        $var = is_array($segments) ? $segments : self::segmentUri($segments);
+        
+        return end($var);
     }
 }
