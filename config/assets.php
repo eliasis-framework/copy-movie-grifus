@@ -1,43 +1,44 @@
 <?php
 /**
- * Copy Movie Grifus · Extensions For Grifus 
- * 
- * @author     Josantonius - hello@josantonius.com
- * @copyright  Copyright (c) 2017
- * @license    GPL-2.0+
- * @link       https://github.com/Josantonius/Copy-Movie-Grifus.git
- * @since      1.0.0
+ * Copy Movie Grifus · Extensions For Grifus
+ *
+ * @author    Josantonius <hello@josantonius.com>
+ * @package   Josantonius/Copy-Movie-Grifus
+ * @copyright 2017 - 2018 (c) Josantonius - Copy Movie Grifus
+ * @license   GPL-2.0+
+ * @link      https://github.com/Josantonius/Copy-Movie-Grifus.git
+ * @since     1.0.0
  */
 
-use Eliasis\Complement\Type\Module\Module;
+use Eliasis\Complement\Type\Module;
 
-$css = Module::CopyMovieGrifus()->get('url', 'css');
-$js  = Module::CopyMovieGrifus()->get('url', 'js');
+$css = Module::CopyMovieGrifus()->getOption( 'url', 'css' );
+$js  = Module::CopyMovieGrifus()->getOption( 'url', 'js' );
 
 return [
 
-    'assets' => [
+	'assets' => [
 
-        'js' => [
-            'copyMovieGrifus' => [
-                'name'      => 'copyMovieGrifus',
-                'url'       => $js . 'copy-movie-grifus.min.js',
-                'place'     => 'front',
-                'deps'      => ['jquery'],
-                'version'   => '1.0.0',
-                'footer'    => true,
-                'params'    => [],
-            ],
-        ],
-        'css' => [
-            'copyMovieGrifus' => [
-                'name'      => 'copyMovieGrifus',
-                'url'       => $css . 'copy-movie-grifus.min.css',
-                'place'     => 'front',
-                'deps'      => [],
-                'version'   => '1.0.0',
-                'media'     => '',
-            ],
-        ],
-    ],
+		'js' => [
+			'copyMovieGrifus' => [
+				'name'      => 'copyMovieGrifus',
+				'url'       => $js . 'copy-movie-grifus.min.js',
+				'place'     => 'front',
+				'deps'      => [ 'jquery' ],
+				'version'   => '1.0.0',
+				'footer'    => true,
+				'params'    => [],
+			],
+		],
+		'css' => [
+			'copyMovieGrifus' => [
+				'name'      => 'copyMovieGrifus',
+				'url'       => $css . 'copy-movie-grifus.min.css',
+				'place'     => 'front',
+				'deps'      => [],
+				'version'   => '1.0.0',
+				'media'     => '',
+			],
+		],
+	],
 ];

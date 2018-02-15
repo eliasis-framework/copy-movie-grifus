@@ -1,11 +1,12 @@
 /**
- * Copy Movie Grifus · Extensions For Grifus 
- * 
- * @author     Josantonius - hello@josantonius.com
- * @copyright  Copyright (c) 2017
- * @license    GPL-2.0+
- * @link       https://github.com/Josantonius/Copy-Movie-Grifus.git
- * @since      1.0.0
+ * Copy Movie Grifus · Extensions For Grifus
+ *
+ * @author    Josantonius <hello@josantonius.com>
+ * @package   Josantonius/Copy-Movie-Grifus
+ * @copyright 2017 - 2018 (c) Josantonius - Copy Movie Grifus
+ * @license   GPL-2.0+
+ * @link      https://github.com/Josantonius/Copy-Movie-Grifus.git
+ * @since     1.0.0
  */
 
 jQuery(document).ready(function($) {
@@ -36,18 +37,13 @@ jQuery(document).ready(function($) {
       );
       
       var movie = eliasis.movie_info;
-
       var clipboard = movie.the_title + movie.title + movie.published + movie.rated + movie.duration + movie.rating + movie.votes + movie.awards + movie.country + movie.sipnosis + movie.director + movie.stars + movie.cast + movie.genre;
-
       $("#grifusDataSheet").attr("data-clipboard-text", clipboard);
-
       new Clipboard("#grifusDataSheet");
-
       $("#grifusDataSheet").click();
    }
 
    if ($("#cap1").length || $("#cap3").length) {
-
       copyDataSheet();
    }
    

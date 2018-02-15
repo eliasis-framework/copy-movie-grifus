@@ -1,6 +1,5 @@
 {
     "name":        "josantonius/copy-movie-grifus",
-    "version":     "1.0.3",
     "description": "Copy full movie information from a single button.",
     "type": "eliasis-module",
     "keywords": [
@@ -21,7 +20,6 @@
         }
     ],
     "config": {
-        "vendor-dir": "lib/vendor",
         "preferred-install": "dist"
     },
     "minimum-stability": "dev",
@@ -31,15 +29,35 @@
         "source": "https://github.com/Josantonius/copy-movie-grifus"
     },
     "require": {
-        "php": "^5.3 || ^7.0",
+        "php": "^5.6 || ^7.0",
         "eliasis-framework/eliasis"     : "^1.1.1",
         "eliasis-framework/complement"  : "^1.0.9",
         "Josantonius/WP_Register"       : "^1.0.4",
         "composer/installers"           : "^1.4.0"
     },
+    "require-dev": {
+        "wp-coding-standards/wpcs": "^0.14",
+        "phpunit/phpunit": "^5.7 || ^6.0",
+        "squizlabs/php_codesniffer": "^3.2.2",
+        "friendsofphp/php-cs-fixer": "^2.3 || ^2.8",
+        "phpmd/phpmd": "^2.6"
+    },
     "autoload": {
-        "psr-4": {
-            "ExtensionsForGrifus\\Modules\\CopyMovieGrifus\\" : "src/"
+        "classmap": ["src/"]
+    },
+    "autoload-dev": {
+        "classmap": ["tests/"]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
         }
+    },
+    "scripts": {
+        "phpunit": "vendor/bin/phpunit --colors=always;",
+        "phpcs": "vendor/bin/phpcs --standard=phpcs.xml $(find . -name '*.php');",
+        "phpmd": "vendor/bin/phpmd src,tests text ./phpmd.xml",
+        "fix": ["vendor/bin/php-cs-fixer fix -v", "vendor/bin/phpcbf src tests"],
+        "tests": ["clear", "@phpmd", "@phpcs", "@phpunit"]
     }
 }

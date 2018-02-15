@@ -10,15 +10,22 @@
  * @since     1.0.0
  */
 
-use Eliasis\Framework\App;
+namespace EFG\Modules\CopyMovieGrifus\Controller\Front;
 
-$namespace = App::EFG()->getOption( 'namespaces', 'modules' );
+use Eliasis\Framework\Controller;
 
-return [
+/**
+ * Copy controller.
+ */
+class Copy extends Controller {
 
-	'namespaces' => [
+	/**
+	 * Get movie info.
+	 *
+	 * @return array
+	 */
+	public function getMovieInfo() {
 
-		'controller' => $namespace . 'CopyMovieGrifus\\Controller\\',
-		'front'      => $namespace . 'CopyMovieGrifus\\Controller\\Front\\',
-	],
-];
+		return $this->model->getMovieInfo();
+	}
+}

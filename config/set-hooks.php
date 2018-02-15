@@ -1,22 +1,23 @@
 <?php
 /**
- * Copy Movie Grifus · Extensions For Grifus 
- * 
- * @author     Josantonius - hello@josantonius.com
- * @copyright  Copyright (c) 2017
- * @license    GPL-2.0+
- * @link       https://github.com/Josantonius/Copy-Movie-Grifus.git
- * @since      1.0.0
+ * Copy Movie Grifus · Extensions For Grifus
+ *
+ * @author    Josantonius <hello@josantonius.com>
+ * @package   Josantonius/Copy-Movie-Grifus
+ * @copyright 2017 - 2018 (c) Josantonius - Copy Movie Grifus
+ * @license   GPL-2.0+
+ * @link      https://github.com/Josantonius/Copy-Movie-Grifus.git
+ * @since     1.0.0
  */
 
-use Eliasis\Complement\Type\Module\Module;
+use Eliasis\Complement\Type\Module;
 
-$namespace = Module::CopyMovieGrifus()->get('namespaces', 'controller');
+$namespace = Module::CopyMovieGrifus()->getOption( 'namespaces', 'controller' );
 
 return [
 
 	'hooks' => [
 
-		['launch-modules', [$namespace.'Launcher\\Launcher', 'init'], 8, 0],
-	]
+		[ 'launch-modules', [ $namespace . 'Launcher', 'init' ], 8, 0 ],
+	],
 ];

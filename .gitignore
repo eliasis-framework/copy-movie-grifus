@@ -1,4 +1,3 @@
-phpunit.xml
 composer.phar
 composer.lock
 composer-test.lock
@@ -7,6 +6,7 @@ artifacts/
 node_modules/
 docs/_build
 docs/*.pyc
+vendor/
 .git*/
 .idea
 .DS_STORE
@@ -17,3 +17,4 @@ search-inside.zip
 .svn-prop.tmp.swp
 svn-prop.tmp
 versions/
+.php_cs.cache
