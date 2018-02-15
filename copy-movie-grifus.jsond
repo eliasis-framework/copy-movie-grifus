@@ -49,22 +49,16 @@
             }
          },
          "src": {
-            "Controller": {
-               "Launcher": [
-                  "Launcher.php"
-               ],
-               "Front": {
-                  "Copy": [
-                     "Copy.php"
-                  ]
-               }
+            "controller": {
+               "0": "class-launcher.php",
+               "front": [
+                  "class-copy.php"
+               ]
             },
-            "Model": {
-               "Front": {
-                  "Copy": [
-                     "Copy.php"
-                  ]
-               }
+            "model": {
+               "front": [
+                  "class-copy.php"
+               ]
             }
          }
       }
