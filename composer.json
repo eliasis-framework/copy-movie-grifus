@@ -1,5 +1,5 @@
 {
-    "name":        "josantonius/copy-movie-grifus",
+    "name":        "eliasis-framework/copy-movie-grifus",
     "description": "Copy full movie information from a single button.",
     "type": "eliasis-module",
     "keywords": [
@@ -24,9 +24,9 @@
     },
     "minimum-stability": "dev",
     "support": {
-        "issues": "https://github.com/Josantonius/copy-movie-grifus/issues",
+        "issues": "https://github.com/eliasis-framework/copy-movie-grifus/issues",
         "forum": "http://stackoverflow.com/tags/copy-movie-grifus",
-        "source": "https://github.com/Josantonius/copy-movie-grifus"
+        "source": "https://github.com/eliasis-framework/copy-movie-grifus"
     },
     "require": {
         "php": "^5.6 || ^7.0",

@@ -8,15 +8,15 @@
    },
    "state": "uninstalled",
    "category": "wp-plugin-extension",
-   "url": "https://github.com/Josantonius/Copy-Movie-Grifus.git",
+   "url": "https://github.com/eliasis-framework/copy-movie-grifus.git",
    "author": "Josantonius",
-   "author-uri": "https://josantonius.com/",
+   "author-url": "https://josantonius.com/",
    "license": "GPL-2.0+",
    "hooks-controller": "Launcher",
-   "url-import": "https://raw.githubusercontent.com/Josantonius/Copy-Movie-Grifus/master/",
+   "url-import": "https://raw.githubusercontent.com/eliasis-framework/copy-movie-grifus/master/",
    "installation-files": {
       "copy-movie-grifus": {
-         "0": "copy-movie-grifus.jsond",
+         "0": "copy-movie-grifus.json",
          "1": "LICENSE",
          "2": "composer.json",
          "config": [

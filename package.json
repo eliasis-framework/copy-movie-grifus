@@ -25,12 +25,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Josantonius/Copy-Movie-Grifus.git"
+    "url": "git+https://github.com/eliasis-framework/copy-movie-grifus.git"
   },
   "author": "Josantonius",
   "license": "GPL-2.0+",
   "bugs": {
-    "url": "https://github.com/Josantonius/copy-movie-grifus/issues"
+    "url": "https://github.com/eliasis-framework/copy-movie-grifus/issues"
   },
-  "homepage": "https://github.com/Josantonius/Copy-Movie-Grifus#readme"
+  "homepage": "https://github.com/eliasis-framework/copy-movie-grifus#readme"
 }
