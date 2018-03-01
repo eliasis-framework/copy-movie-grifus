@@ -3,10 +3,10 @@
  * Copy Movie Grifus · Extensions For Grifus
  *
  * @author    Josantonius <hello@josantonius.com>
- * @package   Josantonius/Copy-Movie-Grifus
+ * @package   eliasis-framework/copy-movie-grifus
  * @copyright 2017 - 2018 (c) Josantonius - Copy Movie Grifus
  * @license   GPL-2.0+
- * @link      https://github.com/Josantonius/Copy-Movie-Grifus.git
+ * @link      https://github.com/eliasis-framework/copy-movie-grifus.git
  * @since     1.0.0
  */
 
@@ -30,7 +30,7 @@ class Launcher extends Controller {
 		$state = Module::CopyMovieGrifus()->getOption( 'state' );
 
 		if ( 'active' === $state || 'outdated' === $state ) {
-			add_action( 'init', [ $this, 'setLanguage' ] );
+			add_action( 'init', [ $this, 'set_language' ] );
 			if ( ! is_admin() ) {
 				$this->front();
 			}
@@ -45,10 +45,10 @@ class Launcher extends Controller {
 		add_action(
 			'wp', function() {
 				App::id( 'EFG' );
-				if ( App::main()->isSingle() ) {
-					$this->setLanguage();
-					$this->addScripts();
-					$this->addStyles();
+				if ( App::main()->is_single() ) {
+					$this->set_language();
+					$this->add_scripts();
+					$this->add_styles();
 				}
 			}
 		);
@@ -57,7 +57,7 @@ class Launcher extends Controller {
 	/**
 	 * Set plugin textdomain.
 	 */
-	public function setLanguage() {
+	public function set_language() {
 
 		$plugin_slug = App::EFG()->getOption( 'slug' );
 		$module_slug = Module::CopyMovieGrifus()->getOption( 'slug' );
@@ -69,15 +69,12 @@ class Launcher extends Controller {
 	/**
 	 * Add scripts.
 	 */
-	protected function addScripts() {
+	protected function add_scripts() {
 
 		$js = Module::CopyMovieGrifus()->getOption( 'assets', 'js' );
-
 		$setting = $js['copyMovieGrifus'];
-
 		$params = Module::CopyMovieGrifus()->getControllerInstance( 'Copy' )
 										   ->getMovieInfo();
-
 		$setting['params'] = array_merge( $setting['params'], $params );
 
 		WP_Register::add( 'script', $setting );
@@ -86,10 +83,9 @@ class Launcher extends Controller {
 	/**
 	 * Add styles.
 	 */
-	protected function addStyles() {
+	protected function add_styles() {
 
 		$css = Module::CopyMovieGrifus()->getOption( 'assets', 'css' );
-
 		WP_Register::add( 'style', $css['copyMovieGrifus'] );
 	}
 }

@@ -3,10 +3,10 @@
  * Copy Movie Grifus · Extensions For Grifus
  *
  * @author    Josantonius <hello@josantonius.com>
- * @package   Josantonius/Copy-Movie-Grifus
+ * @package   eliasis-framework/copy-movie-grifus
  * @copyright 2017 - 2018 (c) Josantonius - Copy Movie Grifus
  * @license   GPL-2.0+
- * @link      https://github.com/Josantonius/Copy-Movie-Grifus.git
+ * @link      https://github.com/eliasis-framework/copy-movie-grifus.git
  * @since     1.0.0
  */
 
@@ -27,9 +27,7 @@ class Copy extends Model {
 	public function getMovieInfo() {
 
 		$post_id = get_the_ID();
-
 		$post_title = get_the_title();
-
 		$content_post = get_post( $post_id );
 
 		$post_content = $content_post->post_content;

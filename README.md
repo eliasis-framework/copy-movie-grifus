@@ -1,6 +1,6 @@
 # Extensions For Grifus · Copy Movie Grifus
 
-[![Latest Stable Version](https://poser.pugx.org/josantonius/copy-movie-grifus/v/stable)](https://packagist.org/packages/josantonius/copy-movie-grifus) [![Total Downloads](https://poser.pugx.org/josantonius/copy-movie-grifus/downloads)](https://packagist.org/packages/josantonius/copy-movie-grifus) [![Latest Unstable Version](https://poser.pugx.org/josantonius/copy-movie-grifus/v/unstable)](https://packagist.org/packages/josantonius/copy-movie-grifus) [![License](https://poser.pugx.org/josantonius/copy-movie-grifus/license)](https://packagist.org/packages/josantonius/copy-movie-grifus)
+[![Latest Stable Version](https://poser.pugx.org/eliasis-framework/copy-movie-grifus/v/stable)](https://packagist.org/packages/eliasis-framework/copy-movie-grifus) [![Total Downloads](https://poser.pugx.org/eliasis-framework/copy-movie-grifus/downloads)](https://packagist.org/packages/eliasis-framework/copy-movie-grifus) [![Latest Unstable Version](https://poser.pugx.org/eliasis-framework/copy-movie-grifus/v/unstable)](https://packagist.org/packages/eliasis-framework/copy-movie-grifus) [![License](https://poser.pugx.org/eliasis-framework/copy-movie-grifus/license)](https://packagist.org/packages/eliasis-framework/copy-movie-grifus)
 
 [Versión en español](README-ES.md)
 
@@ -31,15 +31,15 @@ Install full plugin from [Composer](http://getcomposer.org/download/). In the ro
 
 Install plugin module from [Composer](http://getcomposer.org/download/). In the root folder of Extensions For Grifus plugin run:
 
-    $ composer require josantonius/copy-movie-grifus
+    $ composer require eliasis-framework/copy-movie-grifus
 
 The previous command will only install the necessary files, if you prefer to download the entire source code (including tests, vendor folder, sass files, docs...) you can use:
 
-    $ composer require josantonius/copy-movie-grifus --prefer-source
+    $ composer require eliasis-framework/copy-movie-grifus --prefer-source
 
 Or you can also clone the complete repository with Git:
 
-	$ git clone https://github.com/Josantonius/Copy-Movie-Grifus.git
+	$ git clone https://github.com/eliasis-framework/copy-movie-grifus.git
 
 From your WordPress dashboard:
 
@@ -63,7 +63,7 @@ Once Activated:
 
 ### Requirements
 
-This pluggin is supported by PHP versions 5.3 or higher and is compatible with HHVM versions 3.0 or higher.
+This pluggin is supported by PHP versions 5.6 or higher and is compatible with HHVM versions 3.0 or higher.
 
 ### Images
 

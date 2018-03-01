@@ -30,9 +30,9 @@
     },
     "require": {
         "php": "^5.6 || ^7.0",
-        "eliasis-framework/eliasis"     : "^1.1.1",
-        "eliasis-framework/complement"  : "^1.0.9",
-        "Josantonius/WP_Register"       : "^1.0.4",
+        "eliasis-framework/eliasis"     : "^1.1.3",
+        "eliasis-framework/complement"  : "^1.1.1",
+        "Josantonius/WP_Register"       : "^1.0.5",
         "composer/installers"           : "^1.4.0"
     },
     "require-dev": {
