@@ -42,7 +42,7 @@ before_script:
 
 script:
   - phpcs --standard=phpcs.xml $(find . -name '*.php')
-  - phpmd src,tests text ./phpmd.xml --exclude tests/sample-app/*
+  - phpmd src text ./phpmd.xml
 
 after_success:
  - bash <(curl -s https://codecov.io/bash)
