@@ -24,27 +24,14 @@ cache:
   - composer
   - $HOME/.composer/cache
 
-env:
-  - WP_PROJECT_TYPE=plugin WP_VERSION=latest WP_MULTISITE=0 WP_TEST_URL=http://localhost:12000 WP_TEST_USER=test WP_TEST_USER_PASS=test
-
 matrix:
   include:
     - php: 7.2
-      env: WP_VERSION=latest
     - php: 7.1
-      env: WP_VERSION=latest
     - php: 7.0
-      env: WP_VERSION=latest
     - php: 5.6
-      env: WP_VERSION=4.4
-    - php: 5.6
-      env: WP_VERSION=latest
-    - php: 5.6
-      env: WP_VERSION=trunk
     - php: hhvm
-      env: WP_VERSION=latest
     - php: nightly
-      env: WP_VERSION=latest
   allow_failures:
     - php: nightly
 
@@ -54,11 +41,8 @@ before_script:
   - travis_retry composer install
 
 script:
-  - |
-    if [[ ! -z "$WP_VERSION" ]] ; then
-      phpcs --standard=phpcs.xml $(find . -name '*.php')
-      phpmd src,tests text ./phpmd.xml --exclude tests/sample-app/*
-    fi
+  - phpcs --standard=phpcs.xml $(find . -name '*.php')
+  - phpmd src,tests text ./phpmd.xml --exclude tests/sample-app/*
 
 after_success:
  - bash <(curl -s https://codecov.io/bash)
