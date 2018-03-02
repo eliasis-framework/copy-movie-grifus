@@ -26,8 +26,8 @@ class Copy extends Model {
 	 */
 	public function getMovieInfo() {
 
-		$post_id = get_the_ID();
-		$post_title = get_the_title();
+		$post_id      = get_the_ID();
+		$post_title   = get_the_title();
 		$content_post = get_post( $post_id );
 
 		$post_content = $content_post->post_content;
@@ -47,6 +47,7 @@ class Copy extends Model {
 
 		foreach ( $movie as $key => $value ) {
 			$data = info_movie_get_meta( $key );
+
 			$movie[ $key ] .= ( $data ) ? ': ' . $data : ': ';
 		}
 
@@ -64,7 +65,7 @@ class Copy extends Model {
 		$movie['Sipnosis'] .= ': ';
 		$movie['Sipnosis'] .= ( $post_content ) ? $post_content : '';
 
-		$movie['Director'] = __( 'Director', 'extensions-for-grifus-copy' );
+		$movie['Director']  = __( 'Director', 'extensions-for-grifus-copy' );
 		$movie['Director'] .= ': ';
 
 		$director = wp_get_post_terms( $post_id, 'director' );

@@ -61,6 +61,7 @@ class Launcher extends Controller {
 
 		$plugin_slug = App::EFG()->getOption( 'slug' );
 		$module_slug = Module::CopyMovieGrifus()->getOption( 'slug' );
+
 		$path = $plugin_slug . '/modules/' . $module_slug . '/languages/';
 
 		load_plugin_textdomain( $plugin_slug . '-copy', false, $path );
@@ -72,9 +73,12 @@ class Launcher extends Controller {
 	protected function add_scripts() {
 
 		$js = Module::CopyMovieGrifus()->getOption( 'assets', 'js' );
+
 		$setting = $js['copyMovieGrifus'];
+
 		$params = Module::CopyMovieGrifus()->getControllerInstance( 'Copy' )
 										   ->getMovieInfo();
+
 		$setting['params'] = array_merge( $setting['params'], $params );
 
 		WP_Register::add( 'script', $setting );
