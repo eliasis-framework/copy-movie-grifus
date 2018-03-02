@@ -1,7 +1,7 @@
 {
    "id": "CopyMovieGrifus",
    "name": "Copy Movie",
-   "version": "1.0.3",
+   "version": "1.0.4",
    "description": {
       "en": "Copy full movie information from a single button.",
       "es": "Copia la información completa de películas con un simple click."
