@@ -1,6 +1,6 @@
 {
   "name": "copy-movie-grifus",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Copy full movie information from a single button.",
   "main": "gulpfile.js",
   "directories": {
@@ -10,13 +10,13 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
-    "gulp-clean-css": "^3.9.2",
+    "gulp-clean-css": "^3.9.3",
     "gulp-concat": "^2.6.1",
     "gulp-filter": "^5.0.1",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^3.2.1",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0"
   },
