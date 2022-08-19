@@ -7,7 +7,6 @@ node_modules/
 docs/_build
 docs/*.pyc
 vendor/
-.git*/
 .idea
 .DS_STORE
 branches/
@@ -18,3 +17,6 @@ search-inside.zip
 svn-prop.tmp
 versions/
 .php_cs.cache
+.repository.md
+copy-movie-grifus.code-workspace
+.vscode/
